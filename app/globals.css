@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 33% 98%;
+    --foreground: 184 100% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 184 100% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 184 100% 10%;
+
+    --primary: 184 95% 18%;
+    --primary-foreground: 195 33% 98%;
+
+    --secondary: 184 95% 10%;
+    --secondary-foreground: 195 33% 98%;
+
+    --muted: 184 10% 90%;
+    --muted-foreground: 184 10% 40%;
+
+    --accent: 10 38% 40%;
+    --accent-foreground: 195 33% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --highlight: 187 84% 37%;
+    --highlight-foreground: 195 33% 98%;
+
+    --soft: 200 33% 85%;
+    --soft-foreground: 184 100% 10%;
+
+    --border: 184 10% 85%;
+    --input: 184 10% 85%;
+    --ring: 184 95% 18%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 184 95% 5%;
+    --foreground: 195 33% 98%;
+
+    --card: 184 95% 8%;
+    --card-foreground: 195 33% 98%;
+
+    --popover: 184 95% 8%;
+    --popover-foreground: 195 33% 98%;
+
+    --primary: 184 95% 18%;
+    --primary-foreground: 195 33% 98%;
+
+    --secondary: 184 95% 10%;
+    --secondary-foreground: 195 33% 98%;
+
+    --muted: 184 10% 20%;
+    --muted-foreground: 184 10% 70%;
+
+    --accent: 10 38% 40%;
+    --accent-foreground: 195 33% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --highlight: 187 84% 37%;
+    --highlight-foreground: 195 33% 98%;
+
+    --soft: 200 33% 30%;
+    --soft-foreground: 195 33% 98%;
+
+    --border: 184 10% 20%;
+    --input: 184 10% 20%;
+    --ring: 184 95% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.teal-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--highlight)));
+}
+
+.accent-gradient {
+  background: linear-gradient(135deg, hsl(var(--accent)), hsl(10 38% 50%));
+}
+
+.card-back {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+  background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--card) / 0.8));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-matched {
+  background: linear-gradient(135deg, hsl(var(--highlight) / 0.2), hsl(var(--highlight) / 0.1));
+  border-color: hsl(var(--highlight));
+}
+
+.luxury-panel {
+  background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--card) / 0.95));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid hsl(var(--border));
+  backdrop-filter: blur(10px);
+}
+
+.luxury-text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.luxury-border {
+  position: relative;
+}
+
+.luxury-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid hsl(var(--highlight) / 0.3);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.pattern-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230FA4AF' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
