@@ -1,0 +1,22 @@
+{
+  "name": "my-v0-project",
+  "version": "0.1.0",
+  "build": {
+    "command": "npm run build",
+    "output": ".next",
+    "install": "npm install"
+  },
+  "start": {
+    "command": "npm start",
+    "port": 3000
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
+} 
