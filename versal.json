@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "build": {
     "command": "npm run build",
-    "output": ".next",
+    "output": "dist",
     "install": "npm install"
   },
   "start": {
-    "command": "npm start",
+    "command": "npx serve dist",
     "port": 3000
   },
   "env": {
@@ -16,7 +16,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/index.html"
     }
   ]
 } 
